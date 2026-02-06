@@ -82,13 +82,11 @@ The following artifacts are authoritative and must remain consistent at all time
 - `/blueprints/*.json` — Make scenario exports
 - `/schemas/*.json` — Google Sheets schema contracts
 - `/diagrams/mermaid/*.mmd` — Canonical, diffable flow diagrams
-- `/diagrams/drawio/*.drawio` — Human-readable visual mirrors
 - `/decisions/ADR-*.md` — Architecture Decision Records
 
 ### Enforcement Rules
 - Any logic change requires updating **all applicable artifacts** above.
 - Mermaid diagrams must exactly match the Make blueprint and module names.
-- draw.io diagrams are visual mirrors of Mermaid (no extra or inferred steps).
 - ADRs are required for any semantic or lifecycle decision (e.g., status meaning).
 - Chat history is **not** an authoritative source.
 
@@ -804,7 +802,7 @@ Planned schedule (DISABLED until enabled):
 **WHY:** Prevent semantic drift and undocumented logic changes.
 **FROM → TO:**
 - FROM: Handoff + blueprint only
-- TO: Handoff + blueprint + schemas + Mermaid + draw.io + ADR enforcement
+- TO: Handoff + blueprint + schemas + Mermaid + ADR enforcement
 
 ### v1.15 — 2026-02-05
 - **WHEN:** Phase 1 → Step 1.2 (Build) → Micro-steps 1.2.3-I through 1.2.3-X.
