@@ -71,7 +71,34 @@ Planned stack:
 - Sheets and schemas may be recreated in V2 by explicit design
 
 ---
+## Governance & Enforcement (LOCKED)
 
+This repository is the authoritative governance and enforcement layer for Beggars Whisky — AI Social Agent V2.
+
+### Single Source of Truth
+The following artifacts are authoritative and must remain consistent at all times:
+
+- `/handoff/*.md` — Canonical system documentation (UPDATE-IN-PLACE only)
+- `/blueprints/*.json` — Make scenario exports
+- `/schemas/*.json` — Google Sheets schema contracts
+- `/diagrams/mermaid/*.mmd` — Canonical, diffable flow diagrams
+- `/diagrams/drawio/*.drawio` — Human-readable visual mirrors
+- `/decisions/ADR-*.md` — Architecture Decision Records
+
+### Enforcement Rules
+- Any logic change requires updating **all applicable artifacts** above.
+- Mermaid diagrams must exactly match the Make blueprint and module names.
+- draw.io diagrams are visual mirrors of Mermaid (no extra or inferred steps).
+- ADRs are required for any semantic or lifecycle decision (e.g., status meaning).
+- Chat history is **not** an authoritative source.
+
+### Status Semantics
+Status meanings are defined in:
+- `decisions/ADR-001-status-semantics.md`
+
+Any deviation requires a new ADR.
+
+---
 
 ### Make UI — Functions & Operators Reference (CURRENT UI)
 - **String concatenation:** Use **adjacent tokens** or the **`&` operator** (General → Operators). `concat()` is **not present** in the current picker UI.
@@ -772,6 +799,13 @@ Planned schedule (DISABLED until enabled):
 ---
 
 ## 9. Change Log
+### v1.16 — Governance Enforcement Added
+**WHEN:** Phase 1 / Step 1.2 (mid-step pause)
+**WHY:** Prevent semantic drift and undocumented logic changes.
+**FROM → TO:**
+- FROM: Handoff + blueprint only
+- TO: Handoff + blueprint + schemas + Mermaid + draw.io + ADR enforcement
+
 ### v1.15 — 2026-02-05
 - **WHEN:** Phase 1 → Step 1.2 (Build) → Micro-steps 1.2.3-I through 1.2.3-X.
 - **WHY:** Complete the Shows “parent row” slice end-to-end with idempotency and document Make UI realities discovered during execution.
