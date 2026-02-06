@@ -1,0 +1,33 @@
+flowchart TD
+  %% =========================================
+  %% Phase 1 — Weekly Planner V2
+  %% Parent Ingestion (Shows + Releases)
+  %% =========================================
+
+  A[Initialize Planner Settings Map]
+
+  A --> R{Router — Sources Fan-out}
+
+  %% -----------------
+  %% Shows branch
+  %% -----------------
+  R --> S1[Read Shows Source]
+  S1 -->|status = active| S2[Iterate Active Shows]
+  S2 --> S3[Set Current Show Context]
+  S3 --> S4[Set Current Show ID]
+  S4 --> S5[Set Current Show Date]
+  S5 --> S6[Compute Week Key — Shows]
+  S6 --> S7[Search Existing Parent Row — Shows]
+  S7 -->|0 rows| S8[Create Parent Row — Shows]
+
+  %% -----------------
+  %% Releases branch
+  %% -----------------
+  R --> R1[Read Releases Source]
+  R1 -->|status = active| R2[Iterate Active Releases]
+  R2 --> R3[Set Current Release Context]
+  R3 --> R4[Set Current Release ID]
+  R4 --> R5[Set Current Release Date]
+  R5 --> R6[Compute Week Key — Releases]
+  R6 --> R7[Search Existing Parent Row — Releases]
+  R7 -->|0 rows| R8[Create Parent Row — Releases]
