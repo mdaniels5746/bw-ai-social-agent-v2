@@ -1,0 +1,168 @@
+{
+  "BW_SETTINGS": {
+    "gateway_base_url": {
+      "value": null,
+      "notes": "Canonical Cloud Run gateway URL (no trailing slash)"
+    },
+    "gateway_bearer_secret_record_id": {
+      "value": "BW_V2_SECRET",
+      "notes": "Make Data Store record ID only — NEVER store secret value"
+    },
+    "environment": {
+      "value": "v2",
+      "notes": "Environment identifier (v2 locked)"
+    }
+  },
+  "BW_ENUMS": {
+    "content_status": {
+      "enum_value": "failed",
+      "notes": "Allowed status (no-touch)"
+    },
+    "platform": {
+      "enum_value": "YouTube Shorts",
+      "notes": "Child platform (requires_video=true; path disabled)"
+    }
+  },
+  "BW_SOURCES_SHOWS": {
+    "SHOW-EXAMPLE-001": {
+      "event_date": "2026-02-28T06:00:00.000Z",
+      "event_name": "Example Show",
+      "venue": "Name of Venue",
+      "city": "Tulsa",
+      "state": "OK",
+      "country": "USA",
+      "ticket_url": null,
+      "status": "active",
+      "notes": "Schema test row (delete later)"
+    }
+  },
+  "BW_SOURCES_RELEASES": {
+    "REL-EXAMPLE-001": {
+      "release_date": "2026-03-30T05:00:00.000Z",
+      "release_name": "Example Single",
+      "release_type": "single",
+      "primary_platforms": "Spotify,Apple Music",
+      "pre_save_url": null,
+      "status": "active",
+      "notes": "Schema test row (delete later)"
+    }
+  },
+  "BW_SOURCES_EVENTS": {
+    "EVT-EXAMPLE-001": {
+      "event_date": "2026-02-18T06:00:00.000Z",
+      "event_name": "Example Radio Feature",
+      "event_type": "radio",
+      "partner": "Example Partner",
+      "cta_url": null,
+      "status": "active",
+      "notes": "Schema test row (delete later)"
+    }
+  },
+  "BW_CONTENT_QUEUE": {
+    "POST-PARENT-EXAMPLE-001": {
+      "week_key": "2026-W06",
+      "row_type": "parent",
+      "parent_post_id": null,
+      "source_type": null,
+      "source_row_id": null,
+      "platform": "Instagram",
+      "requires_video": false,
+      "status": "Idea",
+      "planned_date": "2026-02-06T06:00:00.000Z",
+      "title": "Example Parent Post",
+      "caption": null,
+      "cta": null,
+      "hashtags": null,
+      "asset_refs": "Dropbox:/BW/V2/Assets/example",
+      "notes": "Schema test parent row (delete later)",
+      "created_at": null,
+      "updated_at": null
+    },
+    "POST-CHILD-EXAMPLE-001": {
+      "week_key": "2026-W06",
+      "row_type": "child",
+      "parent_post_id": "POST-PARENT-EXAMPLE-001",
+      "source_type": "shows",
+      "source_row_id": "SHOW-EXAMPLE-001",
+      "platform": "Facebook",
+      "requires_video": false,
+      "status": "Idea",
+      "planned_date": "2026-02-06T06:00:00.000Z",
+      "title": "Example Child Post",
+      "caption": null,
+      "cta": null,
+      "hashtags": null,
+      "asset_refs": "Dropbox:/BW/V2/Assets/example",
+      "notes": "Schema test child row (delete later)",
+      "created_at": null,
+      "updated_at": null
+    },
+    "": {
+      "week_key": "v2|shows|SHOW-EXAMPLE-001|2026-W06",
+      "row_type": "parent",
+      "parent_post_id": null,
+      "source_type": "shows",
+      "source_row_id": "SHOW-EXAMPLE-001",
+      "platform": null,
+      "requires_video": null,
+      "status": "Idea",
+      "planned_date": null,
+      "title": null,
+      "caption": null,
+      "cta": null,
+      "hashtags": null,
+      "asset_refs": null,
+      "notes": null,
+      "created_at": null,
+      "updated_at": null
+    }
+  },
+  "BW_CONTENT_QUEUE_ARCHIVE": {},
+  "BW_LOGS": {},
+  "BW_PLANNER_SETTINGS": {
+    "home_city": {
+      "value": "Tulsa",
+      "notes": "Home city used for location-aware copy"
+    },
+    "home_state": {
+      "value": "OK",
+      "notes": "Home state used for location-aware copy"
+    },
+    "primary_regions": {
+      "value": null,
+      "notes": "Comma-separated list or leave blank"
+    },
+    "default_posts_per_week": {
+      "value": 2,
+      "notes": "Planner target per week"
+    },
+    "max_posts_per_week": {
+      "value": 5,
+      "notes": "Upper cap per week"
+    },
+    "show_boost_window_days": {
+      "value": 21,
+      "notes": "Days before/after show to boost"
+    },
+    "release_promo_window_days": {
+      "value": 28,
+      "notes": "Days before/after release to promo"
+    },
+    "require_approval": {
+      "value": true,
+      "notes": "If TRUE, Weekly Planner marks items Need Approval"
+    },
+    "brand_hashtags": {
+      "value": null,
+      "notes": "Comma-separated hashtags (no # required; we’ll normalize)"
+    },
+    "genre_hashtags": {
+      "value": null,
+      "notes": "Comma-separated hashtags (no # required; we’ll normalize)"
+    },
+    "forbidden_phrases": {
+      "value": null,
+      "notes": "Comma-separated phrases to avoid"
+    }
+  }
+}

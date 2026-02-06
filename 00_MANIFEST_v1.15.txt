@@ -1,0 +1,12 @@
+# Beggars Whisky — AI Social Agent V2 Handoff Pack Manifest
+Version: v1.15
+Generated: 2026-02-05
+
+| File | Bytes | SHA256 |
+|---|---:|---|
+| 00_MANIFEST_v1.15.txt | 833 | 7c4e2fa5546a43de182311f6bb9c12a1cd68fcc1c4a2b281168dae252864e2a3 |
+| AI_Social_AGENT_V2_Handoff_v1.15.md | 38395 | 765320e2a51dc8f68c3d64d4ee0d5b20321fd0f0ffd0ec366a62a280a188f9ad |
+| BW_V2_WeeklyPlanner_ModuleInventory_v1.15.xlsx | 6404 | 388f5c2e54e758c109f71d61284db2e394e4c97537e6705d4b8ee842a8f1ea97 |
+| BW_AI_Social_Agent_V2_Sheets_v1.14.json | 4178 | 377bb5cbdaf63787edacd7c53ab83dbab9cd3ec03cb46caae12f1219b5328cd1 |
+| BW_V2_Weekly_Planner.blueprintV1.14.json | 65125 | 72f75a0853e56ed74866cb076cf5b9e3bf4f77bdd5e2fa9b276b8f1109a0b23f |
+| BW_V2_Weekly_Planner.blueprint.json | 73226 | 36752a5561b43bd0e59c65d15a2405a9715ac5caa387f1ef54cb50b1181de093 |
