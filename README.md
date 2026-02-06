@@ -10,8 +10,7 @@ This repo is a **governance + enforcement layer** to keep the handoff, blueprint
   2) handoff markdown (UPDATE-IN-PLACE, with WHEN/WHY/FROM→TO)
   3) module inventory spreadsheet (if module set changes)
   4) mermaid diagram (mirrors the blueprint)
-  5) draw.io diagram (human-friendly mirror)
-
+  
 ## Folder Guide
 - `handoff/` — handoff markdown
 - `blueprints/` — Make blueprint exports
