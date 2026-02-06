@@ -61,6 +61,13 @@ Planned stack:
 
 ## 2. Global Governance (LOCKED)
 
+### AI Access Rule (Enforced)
+
+All AI agents MUST bootstrap from REPO_ACCESS.md.
+If unavailable, execution MUST STOP.
+
+---
+
 - **Handoff update documentation rule:** Any design/process change must be documented with **WHEN** [phase/step/micro-step] and **WHY** [reason], and the **Change Log** must include **FROM → TO** details.
 
 - Beginner-safe micro-steps only
