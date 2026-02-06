@@ -16,7 +16,6 @@ This repo is a **governance + enforcement layer** to keep the handoff, blueprint
 - `blueprints/` — Make blueprint exports
 - `schemas/` — Sheets schema exports / contracts
 - `diagrams/mermaid/` — Mermaid flow diagrams (diffable)
-- `diagrams/drawio/` — draw.io source diagrams (drag-drop)
 - `decisions/` — ADRs (architecture decisions)
 
 ## Quick Start
